@@ -41,7 +41,7 @@ public class CustomClockView extends View {
     private void init() {
         // 初始化画笔
         circlePaint = new Paint();
-        circlePaint.setColor(Color.BLACK);
+        circlePaint.setColor(Color.GREEN);
         circlePaint.setStyle(Paint.Style.STROKE);
         circlePaint.setStrokeWidth(5);
 
