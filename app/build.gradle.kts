@@ -15,7 +15,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    testOptions{
+        unitTests.isReturnDefaultValues = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -34,7 +36,13 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.tencent.map:tencent-map-vector-sdk:4.3.4")
+    implementation("androidx.test:monitor:1.6.1")
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation ("androidx.tracing:tracing:1.2.0-beta02")
+    testImplementation ("org.json:json:20231013")
+    androidTestImplementation ("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation ("androidx.test.espresso:espresso-contrib:3.5.1")
+    androidTestImplementation ("androidx.test:runner:1.4.0")
+    androidTestImplementation ("androidx.test:rules:1.4.0")
+
 }
